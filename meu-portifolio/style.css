@@ -184,7 +184,7 @@ body, .nav-menu {
   
 .sobre-section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,6 +203,7 @@ body, .nav-menu {
 }
 
 .sobre-section .sobre-page h1{
+    font-size: 2.5rem;
     margin-bottom: 40px;
 }
 
@@ -210,5 +211,77 @@ body, .nav-menu {
     text-align: center;
     letter-spacing: 1px;
     text-align:justify;
+    width: 80%;
 }
 
+.sobre-section .sobre-page-texto p {
+    margin-bottom: 10px;
+}
+
+.projetos-class{
+    background-color: aquamarine;
+    width: 100%;
+    height: 100vh;
+    padding: 0 8rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+}
+
+.projetos-class h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.destaque-class, .todos-class {
+    display: grid;
+    gap: 1.5rem; /* Espaço entre os projetos */
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr); /* 3 itens por linha */
+}
+
+.destaque-class div,
+.todos-class div {
+    background-color: #f2f2f2; /* Cor de fundo básica */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 18rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.destaque-class div:hover,
+.todos-class div:hover {
+    transform: scale(1.05); /* Efeito de destaque ao passar o mouse */
+}
+
+.habilidades-contato {
+    background-color: antiquewhite;
+    width: 100%;
+    padding: 120px 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.habilidades-contato h2 {
+    font-size: 2rem;
+    margin: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.habilidades-class {
+    width: 70%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.habilidades-class a i{
+    font-size: 7rem;
+    color: #000;
+}
