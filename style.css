@@ -275,6 +275,7 @@ body, .nav-menu {
     border-radius: 8px;
     flex: 1 1 calc(33.33% - 20px);
     max-width: 400px;
+    max-height: 300px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
@@ -282,13 +283,24 @@ body, .nav-menu {
     transition: transform 0.4s ease;
     margin: 20px;
     overflow: hidden;
+    filter: grayscale(100%);
+}
+
+.destaque-class .imagem-container img {
+    width: 100%;
+    height: 100%;
 }
 
 .destaque-class .imagem-container .user-icons {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 30px;
+}
+
+.destaque-class .imagem-container .user-icons .icons-container {
+    display: flex;
 }
 
 .destaque-class .imagem-container .user-icons i{
@@ -323,12 +335,6 @@ body, .nav-menu {
     border: 2px solid black;
 }
 
-.destaque-class .imagem-container img {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .projetos-class #mostrar-mais {
     background-color: #888888;
     cursor: pointer;
@@ -351,6 +357,7 @@ body, .nav-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .habilidades-contato h2 {
@@ -393,6 +400,7 @@ body, .nav-menu {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .contato-icons a{
@@ -428,6 +436,19 @@ body, .nav-menu {
     transform: scale(1.05);
 }
 
+.contato-icons #copyMessage {
+    background-color:#c2c2c2;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    border-radius: 20px;
+    display: none;
+}
+
 .class-footer {
     height: 15vh;
     display: flex;
@@ -444,10 +465,54 @@ body, .nav-menu {
     justify-content: center;
     text-align: center;
     color: #000;
+
+}
+
+.class-footer div p{
+    margin-top: 20px;
 }
 
 .class-footer div a{
     color: #000;
+}
+
+.open-class {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFF;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.open-class.hidden {
+    display: none;
+}
+
+.open-class a{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #888888;
+    color: #FFF;
+    border-radius: 20px;
+}
+
+.open-class i {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    margin: 20px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.open-class img {
+    width: 80%;
 }
 
 /* ------------------------------------------------------------------------ */

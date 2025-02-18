@@ -81,3 +81,52 @@ mostrarMais.addEventListener("click", () => {
         mostrandoMais = false;    }
 })
 
+//Copiar número do celular
+function copyPhone(event) {
+    event.preventDefault();
+    const phoneNumber = "(11) 94629-8477"
+
+    navigator.clipboard.writeText(phoneNumber).then(() => {
+        const message = document.getElementById("copyMessage");
+
+        message.style.display = "flex";
+        setTimeout(() => {
+            message.style.display = "none";
+        }, 2000)
+    })
+}
+
+// Abrir seção de projetos 
+const clickContainer = document.querySelectorAll("#click-container");
+const openClass = document.getElementById("open-class");
+const xmarkClose = document.getElementById("xmark-close");
+const openClassImg = document.getElementById("open-class-img");
+const openClassGithub = document.getElementById("open-class-github");
+
+function hiddenProject() {
+    openClass.classList.toggle("hidden");
+    return;
+}
+
+clickContainer.forEach(container => {
+    container.addEventListener("click", (e)=> {
+        hiddenProject();
+        openClassImg.src = e.target.src;
+        
+        const textGit = container.querySelector(".textLink");
+        if(textGit) {
+            openClassGithub.href = textGit.textContent;
+        }
+    })
+})
+
+xmarkClose.addEventListener("click", () => {
+    hiddenProject();
+})
+
+window.addEventListener("click", (e) => {
+    if(e.target == openClass) {
+        hiddenProject();
+    }
+})
+

@@ -10,6 +10,13 @@
 </head>
 
 <body>
+
+    <section class="open-class hidden" id="open-class">
+        <a href="#" id="open-class-github" target="_blank">Repositório githut</a>
+        <i class="fa-solid fa-xmark" id="xmark-close"></i>
+        <img src="" alt="" id="open-class-img">
+    </section>
+
     <header class="nav-menu" id="inicio">
         <div class="navbar">
             <div class="logo">
@@ -26,8 +33,8 @@
                 </ul>
             
                 <div class="icone-redes">
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jefferson-rizzetto/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/JRizzetto" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
             
@@ -95,36 +102,45 @@
     <section class="projetos-class" id="projetos">
         <h2>Projetos</h2>
         <div class="destaque-class">
-            <div class="imagem-container">
+            <div class="imagem-container" id="click-container">
                     <div class="user-icons">
                         <p>Youtube-clone</p>
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css"></i>
-                        <i class="fa-brands fa-js"></i>
-                        <i class="fa-solid fa-gears">API</i>
+                        <div class="icons-container">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css"></i>
+                            <i class="fa-brands fa-js"></i>
+                            <i class="fa-solid fa-gears">API</i>
+                        </div>    
                     </div>
-                <img src="youtube-thumb-img.png" alt="">
+                <img src="./img/youtube-img.png" alt="">
+                <p class="textLink" style="display: none;">https://github.com/JRizzetto/clones-page/tree/main/youtube-clone</p>
             </div>
 
 
-            <div class="imagem-container">
+            <div class="imagem-container" id="click-container">
                     <div class="user-icons">
                         <p>Netflix-clone</p>
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css"></i>
-                        <i class="fa-brands fa-js"></i>
+                        <div class="icons-container">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css"></i>
+                            <i class="fa-brands fa-js"></i>
+                        </div>  
                     </div>
-                <img src="netflix-img-thumb.png" alt="">
+                <img src="./img/netflix-img.png" alt="">
+                <p class="textLink" style="display: none;">https://github.com/JRizzetto/clones-page/tree/main/netflix-clone</p>
             </div>
 
-            <div class="imagem-container">
+            <div class="imagem-container" id="click-container">
                     <div class="user-icons">
                         <p>Instagram-clone</p>
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css"></i>
-                        <i class="fa-brands fa-js"></i>
+                        <div class="icons-container">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css"></i>
+                            <i class="fa-brands fa-js"></i>
+                        </div>  
                     </div>
-                <img src="insta-thumb-img.png" alt="">
+                <img src="./img/insta-img.png" href="https://github.com/JRizzetto/clones-page/tree/main/instagram-feed-clone" alt="">
+                <p class="textLink" style="display: none;">https://github.com/JRizzetto/clones-page/tree/main/netflix-clone</p>
             </div>
 
 
@@ -144,7 +160,6 @@
                 <p id="textButton">Mostrar mais<br></p> 
             <i class="fa-solid fa-chevron-down" id="icone-down"></i>
         </button>
-
     </section>
 
     <section class="habilidades-contato" id="habilidades">
@@ -159,22 +174,23 @@
 
         <h2>Contato</h2>
         <div class="contato-class">
-            <div class="contato-icons"><a href="#">
+            <div class="contato-icons"><a href="#" onclick="copyPhone(event)">
                 <i class="class-icon fa-solid fa-phone"></i>Telefone</a>
                 <p>(11) 94629-8477</p>
+                <p id="copyMessage">Número de celular copiado!</p>
             </div>
 
-            <div class="contato-icons"><a href="#">
+            <div class="contato-icons"><a href="mailto:jeffersonrizzetto@gmail.com?subject=Contato&body=Olá, gostaria de falar com você!">
                 <i class="class-icon fa-solid fa-envelope"></i>E-mail</a>
                 <p>jeffersonrizzetto@gmail.com</p>
             </div>
 
-            <div class="contato-icons"><a href="#">
+            <div class="contato-icons"><a href="https://www.linkedin.com/in/jefferson-rizzetto/" target="_blank">
                 <i class="class-icon fa-brands fa-linkedin-in"></i>Linkedin</a>
                 <p>@jeffersonrizzetto</p>
             </div>
 
-            <div class="contato-icons"><a href="#">
+            <div class="contato-icons"><a href="https://github.com/JRizzetto" target="_blank">
                 <i class="class-icon fa-brands fa-github"></i>GitHub</a>
                 <p>@JRizzetto</p>
             </div>
